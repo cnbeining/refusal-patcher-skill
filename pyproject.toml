@@ -1,0 +1,25 @@
+[project]
+name = "claude-code-session-patcher"
+version = "2.0.0"
+description = "Local Claude Code session and memory patcher for refusal cleanup"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your@email.com"}
+]
+keywords = ["claude", "claude-code", "cli", "session", "patcher"]
+
+[project.scripts]
+claude-patcher = "claude_patcher:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=claude_patcher"
